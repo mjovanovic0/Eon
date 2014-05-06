@@ -1,0 +1,42 @@
+<layout:MainWindow 
+	title="Eon" 
+	maximized="true" 
+	width="800"
+	height="600"
+    xmlns:content="org.apache.pivot.wtk.content"
+	xmlns:bxml="http://pivot.apache.org/bxml" 
+	xmlns:layout="hr.eon.client.window"
+	xmlns="org.apache.pivot.wtk">
+
+	<TabPane bxml:id="MainTabPanel">
+		<BoxPane styles="{horizontalAlignment:'center', verticalAlignment:'center'}">
+			<TabPane.tabData>
+				<content:ButtonData text="Chat" />
+			</TabPane.tabData>
+			<Border styles="{padding: 5}" preferredWidth="570" preferredHeight="535">
+				<BoxPane orientation="vertical">
+					<Border styles="{padding: 5}">
+                        <ScrollPane horizontalScrollBarPolicy="fill" verticalScrollBarPolicy="fill_to_capacity" preferredHeight="485" preferredWidth="545">
+                            <TextArea bxml:id="txtChat" text="Welcome to Eon Chat!" editable="false" />
+                        </ScrollPane>
+                    </Border>
+					<BoxPane bxml:id="bxpChatSay">
+						<TextInput bxml:id="txtChatSay" styles="{font:'Tahoma 13'}" textSize="37" />
+				        <PushButton bxml:id="btnChatSay">
+				            <content:ButtonData text="Pošalji" icon="/hr/eon/client/window/icons/send_chat.png"/>
+				        </PushButton>
+					</BoxPane>
+				</BoxPane>
+			</Border>
+			<BoxPane orientation="vertical">
+				<Label text="Sobe"/>
+				<Border styles="{padding: 5}" preferredWidth="205" preferredHeight="518">
+					<ScrollPane horizontalScrollBarPolicy="fill_to_capacity">
+						<TreeView bxml:id="roomList" />
+					</ScrollPane>
+				</Border>
+			</BoxPane>
+		</BoxPane>
+		
+	</TabPane>
+</layout:MainWindow>

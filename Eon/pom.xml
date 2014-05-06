@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>hr.eon</groupId>
+	<artifactId>Eon</artifactId>
+	<version>0.0.4-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>Eon</name>
+	<url>http://void.local</url>
+
+	<organization>
+		<name>Milan Jovanovic</name>
+		<url />
+	</organization>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.maven-compiler-plugin>2.5.1</version.maven-compiler-plugin>
+		<version.java>1.7</version.java>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.8.1</version>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${version.maven-compiler-plugin}</version>
+					<configuration>
+						<source>${version.java}</source>
+						<target>${version.java}</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<configuration>
+						<archive>
+							<manifestEntries>
+								<specification-title>${project.name}</specification-title>
+								<specification-version>${project.version}</specification-version>
+								<specification-vendor>${project.organization.name</specification-vendor>
+								<implementation-title>${project.name}</implementation-title>
+								<implementation-version>${project.version}</implementation-version>
+								<implementation-vendor-id>${project.groupId}</implementation-vendor-id>
+								<implementation-vendor>${project.organization.name}</implementation-vendor>
+							</manifestEntries>
+						</archive>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<modules>
+		<module>EonAdmin</module>
+		<module>EonCore</module>
+		<module>EonClient</module>
+		<module>EonServer</module>
+	</modules>
+</project>

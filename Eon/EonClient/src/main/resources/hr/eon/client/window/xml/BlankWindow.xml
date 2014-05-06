@@ -1,0 +1,12 @@
+<layout:BlankWindow 
+	width="320" 
+	height="200" 
+    xmlns:bxml="http://pivot.apache.org/bxml"
+	xmlns:layout="hr.eon.client.window"
+	xmlns="org.apache.pivot.wtk"> 
+	<BoxPane preferredWidth="320" preferredHeight="200" orientation="vertical" styles="{horizontalAlignment:'center', verticalAlignment:'center'}">
+	    <ActivityIndicator preferredWidth="96" preferredHeight="96" active="true" />
+		<Label text="Connecting to server..."/>
+	</BoxPane>
+	    
+</layout:BlankWindow>

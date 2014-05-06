@@ -1,0 +1,46 @@
+<layout:LoginWindow 
+	title="Prijava" 
+	maximized="true" 
+	width="320" 
+	height="200" 
+    xmlns:content="org.apache.pivot.wtk.content"
+    xmlns:bxml="http://pivot.apache.org/bxml"
+	xmlns:layout="hr.eon.client.window"
+	xmlns="org.apache.pivot.wtk"> 
+	<StackPane>
+		<TablePane>
+			<columns>
+				<TablePane.Column width="1*" />
+			</columns>
+
+			<TablePane.Row height="1*">
+				<BoxPane styles="{horizontalAlignment:'center', verticalAlignment:'bottom', padding:8}">
+					<Label bxml:id="errorLabel" styles="{font:'Tahoma bold', color:'#ff0000'}" />
+				</BoxPane>
+			</TablePane.Row>
+
+			<TablePane.Row height="-1">
+				<Form>
+					<Form.Section>
+						<FlowPane bxml:id="flgUsername" styles="{alignToBaseline: true}">
+							<ImageView image="/hr/eon/client/window/icons/login_user.png" />
+							<TextInput bxml:id="txtUsername" prompt="Username" Form.label="Username" styles="{font:'Tahoma bold'}" textSize="20" />
+						</FlowPane>
+						<FlowPane bxml:id="flgPassword" styles="{alignToBaseline: true}">
+							<ImageView image="/hr/eon/client/window/icons/login_password.png" />
+							<TextInput bxml:id="txtPassword" prompt="Password" Form.label="Password" styles="{font:'Tahoma bold'}" textSize="20" password="true"/>
+						</FlowPane>
+					</Form.Section>
+				</Form>
+			</TablePane.Row>
+
+			<TablePane.Row height="-1">
+				<BoxPane styles="{horizontalAlignment:'center', verticalAlignment:'top', padding:10}">
+			        <PushButton bxml:id="submitButton" styles="{font:'Tahoma', padding:6}">
+			            <content:ButtonData text="Prijavi se!" icon="/hr/eon/client/window/icons/login.png" />
+			        </PushButton>
+				</BoxPane>
+			</TablePane.Row>
+		</TablePane>
+	</StackPane>
+</layout:LoginWindow>
